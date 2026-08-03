@@ -15,7 +15,7 @@ tailwind.config = {
                 display: ['Space Grotesk', 'sans-serif'],
             },
             animation: {
-                'marquee': 'marquee 25s linear infinite',
+                'marquee': 'marquee 50s linear infinite', //my superhero animation
                 'spin-slow': 'spin 15s linear infinite',
                 'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
                 'float': 'float 6s ease-in-out infinite',
@@ -130,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
 
     revealElements.forEach(el => revealObserver.observe(el));
+    
 
     // 4. Duplicate Marquee
     const marqueeTrack = document.querySelector('.tech-track');
@@ -186,6 +187,8 @@ document.addEventListener('DOMContentLoaded', () => {
             particlesContainer.appendChild(particle);
         }
     }
+
+    
 
     // 7. Certificate Carousel Scroll Buttons
     const certCarousel = document.getElementById('cert-carousel');
